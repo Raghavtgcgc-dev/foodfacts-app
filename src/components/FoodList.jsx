@@ -3,11 +3,8 @@ import FoodCard from './FoodCard'
 function FoodList({ products }) {
   return (
     <div className="food-list">
-      {products.map((product, index) => (
-        <FoodCard
-          key={product.code || index}
-          product={product}
-        />
+      {products.map((product, i) => (
+        <FoodCard key={product.code || i} product={product} />
       ))}
     </div>
   )
